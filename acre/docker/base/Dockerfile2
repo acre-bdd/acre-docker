@@ -5,7 +5,8 @@ RUN python3 -m pip install -r /usr/local/etc/requirements.txt
 RUN mkdir -p /tmp/installer
 COPY installer/* /tmp/installer/
 
-RUN /tmp/installer/tester-user.sh
+ARG USER_ID
+RUN /tmp/installer/tester-user.sh $USER_ID
 
 USER tester
 
