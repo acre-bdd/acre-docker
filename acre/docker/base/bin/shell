@@ -1,11 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
-echo "export DISPLAY=:99.0" >>~/.bashrc
-export DISPLAY=:99.0
+/usr/local/bin/start-xvfb
+# logmon testrun.log
+touch /tmp/lastlog
 
-sudo service xvfb start
-logmon testrun.log
-tail -f /var/log/lastlog
-
-echo running: $*
-[ -z "$*" ] && bash || bash -c "$*"
+echo running: "$*"
+[ -z "$*" ] && tail -f /tmp/lastlog || sh -c "$*"

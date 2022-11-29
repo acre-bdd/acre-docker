@@ -1,0 +1,5 @@
+#!/bin/sh
+password=acre
+Xvfb $DISPLAY -screen 0 1280x1024x24 >/tmp/xvfb.log 2>&1 &
+sleep 1
+x11vnc -forever -passwd $password -shared -rfbport $VNC_PORT -display $DISPLAY >/tmp/x11vnc.log 2>&1 &

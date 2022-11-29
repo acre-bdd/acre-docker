@@ -1,4 +1,6 @@
 from acre-base1
+ENV DISPLAY=:99.0
+ENV VNC_PORT=9900
 COPY etc/requirements.txt /usr/local/etc/
 RUN python3 -m pip install -r /usr/local/etc/requirements.txt
 
