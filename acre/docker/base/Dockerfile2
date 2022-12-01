@@ -1,8 +1,6 @@
 from acre-base1
 ENV DISPLAY=:99.0
 ENV VNC_PORT=9900
-COPY etc/requirements.txt /usr/local/etc/
-RUN python3 -m pip install -r /usr/local/etc/requirements.txt
 
 RUN mkdir -p /tmp/installer
 COPY installer/* /tmp/installer/
@@ -10,6 +8,8 @@ COPY installer/* /tmp/installer/
 ARG USER_ID
 RUN /tmp/installer/tester-user.sh $USER_ID
 
+COPY etc/requirements.txt /usr/local/etc/
+RUN python3 -m pip install -r /usr/local/etc/requirements.txt
 USER tester
 
 CMD ["idock"]
