@@ -4,5 +4,5 @@
 # logmon testrun.log
 touch /tmp/lastlog
 
-echo running: "$*"
+echo -e "running: \033[35m$*\033[0m"
 [ -z "$*" ] && tail -f /tmp/lastlog || sh -c "$*"
