@@ -2,3 +2,6 @@ build/
 dist/
 *.egg-info
 .DS_Store
+__pycache__
+*.swp
+*.swo
