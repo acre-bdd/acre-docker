@@ -6,7 +6,7 @@ RUN apk upgrade
 RUN apk add \
     python3 \
     py3-pip
-RUN apk add x11vnc xvfb ffmpeg ffmpeg-libs chromium chromium-chromedriver sudo
+RUN apk add x11vnc xvfb ffmpeg ffmpeg-libs chromium chromium-chromedriver mrxvt sudo
 # RUN apk add  install -y rxvt dclock
 # RUN apt-get install -y procps
 # RUN apt-get install -y syslog-ng

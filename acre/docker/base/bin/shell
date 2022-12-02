@@ -1,7 +1,7 @@
 #!/bin/sh
 
 /usr/local/bin/start-xvfb
-# logmon testrun.log
+logmon testrun.log
 touch /tmp/lastlog
 
 echo -e "running: \033[35m$*\033[0m"

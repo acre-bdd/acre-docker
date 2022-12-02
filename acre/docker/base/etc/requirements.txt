@@ -2,6 +2,6 @@ radish-bdd[bdd-xml]
 lxml
 selenium
 git+https://github.com/acre-bdd/acre-lib.git@vr
-git+https://github.com/acre-bdd/acre-radish.git@main
+git+https://github.com/acre-bdd/acre-radish.git@monitor
 git+https://github.com/realtimeprojects/python-junit-xml.git@support-id
 
