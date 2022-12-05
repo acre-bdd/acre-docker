@@ -10,6 +10,10 @@ RUN /tmp/installer/tester-user.sh $USER_ID
 
 COPY etc/requirements.txt /usr/local/etc/
 RUN python3 -m pip install -r /usr/local/etc/requirements.txt
+
+COPY acre-radish /tmp/acre-radish
+RUN pip3 install /tmp/acre-radish/
+
 USER tester
 
 CMD ["idock"]
